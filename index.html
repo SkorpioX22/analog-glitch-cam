@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Analog Camera Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="viewport">
+            <canvas id="rxCanvas"></canvas>
+            <video id="sourceVideo" autoplay playsinline muted style="display:none"></video>
+            <canvas id="txCanvas" style="display:none"></canvas>
+        </div>
+
+        <div id="controls">
+            <div class="control-group">
+                <label>SIGNAL STRENGTH</label>
+                <input type="range" id="strengthSlider" min="0" max="100" value="100">
+            </div>
+            
+            <div class="control-group">
+                <label>COLOR SYNC</label>
+                <input type="range" id="colorSyncSlider" min="0" max="2" value="0" step="1">
+            </div>
+
+            <div class="button-row">
+                <button id="flipBtn">FLIP CAMERA</button>
+                <button id="recordBtn">START RECORDING</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
